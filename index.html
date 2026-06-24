@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="말차몰 — 프리미엄 말차와 말차 제품을 만나보세요.">
+  <title>말차몰 | Matcha Mall</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Noto+Sans+KR:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <header class="header">
+    <nav class="nav container">
+      <a href="index.html" class="logo">
+        <span class="logo-icon" aria-hidden="true">🍵</span>
+        말차몰
+      </a>
+      <ul class="nav-links">
+        <li><a href="#best">베스트</a></li>
+        <li><a href="#products">상품</a></li>
+      </ul>
+      <button type="button" class="cart-btn" id="cart-toggle" aria-label="장바구니 열기">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+          stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" />
+          <line x1="3" y1="6" x2="21" y2="6" />
+          <path d="M16 10a4 4 0 0 1-8 0" />
+        </svg>
+        <span class="cart-count" id="cart-count">0</span>
+      </button>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-inner container">
+      <p class="hero-label">Premium Matcha</p>
+      <h1 class="hero-title">정성으로 고른<br>프리미엄 말차</h1>
+      <p class="hero-desc">일본 우지에서 엄선한 말차와 말차 제품을 직접 만나보세요.</p>
+      <a href="#products" class="btn btn-primary">상품 둘러보기</a>
+    </div>
+    <div class="hero-visual" aria-hidden="true">
+      <div class="hero-circle"></div>
+    </div>
+  </section>
+
+  <main>
+    <section class="section" id="best">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-label">Best</span>
+          <h2 class="section-title">베스트 상품</h2>
+          <p class="section-desc">말차몰이 가장 사랑하는 인기 상품</p>
+        </div>
+        <div class="product-grid" id="best-products"></div>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="products">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-label">Shop</span>
+          <h2 class="section-title">전체 상품</h2>
+          <p class="section-desc">말차 파우더부터 간식까지, 다양한 말차 라인업</p>
+        </div>
+        <div class="filter-bar">
+          <button type="button" class="filter-btn active" data-filter="all">전체</button>
+          <button type="button" class="filter-btn" data-filter="powder">파우더</button>
+          <button type="button" class="filter-btn" data-filter="drink">음료</button>
+          <button type="button" class="filter-btn" data-filter="snack">간식</button>
+        </div>
+        <div class="product-grid" id="all-products"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p class="footer-brand">말차몰</p>
+      <p class="footer-copy">Developed by Lake Kim | GitHub: lakekimhandsome</p>
+    </div>
+  </footer>
+
+  <!-- 장바구니 패널 -->
+  <div class="cart-overlay" id="cart-overlay" aria-hidden="true"></div>
+  <aside class="cart-panel" id="cart-panel" aria-label="장바구니">
+    <div class="cart-header">
+      <h2 class="cart-title">장바구니</h2>
+      <button type="button" class="cart-close" id="cart-close" aria-label="장바구니 닫기">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" aria-hidden="true">
+          <line x1="18" y1="6" x2="6" y2="18" />
+          <line x1="6" y1="6" x2="18" y2="18" />
+        </svg>
+      </button>
+    </div>
+    <div class="cart-body" id="cart-items">
+      <p class="cart-empty">장바구니가 비어 있습니다.</p>
+    </div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>합계</span>
+        <strong id="cart-total">₩0</strong>
+      </div>
+      <button type="button" class="btn btn-primary btn-block" id="cart-checkout" disabled>주문하기</button>
+    </div>
+  </aside>
+
+  <script src="js/data.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/app.js"></script>
+</body>
+
+</html>
