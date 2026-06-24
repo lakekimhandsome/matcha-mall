@@ -723,6 +723,30 @@ ul {
   color: var(--matcha-dark);
 }
 
+.site-footer {
+  margin-top: 32px;
+  padding: 24px 20px;
+  border-top: 1px solid var(--gray-100);
+  text-align: center;
+  background: var(--white);
+}
+
+.site-footer__copy {
+  font-size: 0.75rem;
+  color: var(--gray-400);
+}
+
+.site-footer__copy a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: color var(--transition);
+}
+
+.site-footer__copy a:hover {
+  color: var(--matcha);
+}
+
 /* ── Responsive ── */
 @media (max-width: 768px) {
   .nav-links {
